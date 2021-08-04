@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/enter_text"
-        android:textSize="28dp"
+        android:textSize="28sp"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"/>
     <com.google.android.material.textfield.TextInputEditText
@@ -33,8 +33,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/et_enter_text"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/enter_text_color"
-        android:textSize="28dp"
+        android:text="@string/enter_text_size"
+        android:textSize="28sp"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"/>
     <com.google.android.material.textfield.TextInputEditText
@@ -43,8 +43,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_size"
         app:layout_constraintStart_toStartOf="parent"
-        android:hint="@string/enter_color_here"
-        android:textColor="@color/white"/>
+        android:hint="@string/enter_size_here"
+        android:textColor="@color/white"
+        android:inputType="number"/>
 
     <com.google.android.material.textview.MaterialTextView
     android:id="@+id/tv_enter_color"
@@ -52,8 +53,8 @@
     android:layout_height="wrap_content"
     app:layout_constraintTop_toBottomOf="@id/et_enter_size"
     app:layout_constraintStart_toStartOf="parent"
-    android:text="@string/enter_text_size"
-    android:textSize="28dp"
+    android:text="@string/enter_text_color"
+    android:textSize="28sp"
     android:textColor="@color/white"
         android:layout_marginTop="10dp"/>
     <com.google.android.material.textfield.TextInputEditText
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_color"
         app:layout_constraintStart_toStartOf="parent"
-        android:hint="@string/enter_size_here"
+        android:hint="@string/enter_color_here"
         android:textColor="@color/white"/>
 
     <RadioGroup
@@ -71,16 +72,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/et_enter_color"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rb_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/image"/>
+            android:text="@string/image"
+            android:layout_margin="10dp"/>
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rb_gif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gif"/>
+            android:text="@string/gif"
+            android:layout_margin="10dp"/>
     </RadioGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_spinner_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rg_gif_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/choose_filter"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/sp_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_spinner_label"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

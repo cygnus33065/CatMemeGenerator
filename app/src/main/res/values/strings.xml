@@ -7,4 +7,18 @@
     <string name="enter_text_size">Enter Text Size(sp)</string>
     <string name="enter_size_here">Enter Size Here</string>
     <string name="image">Image</string>
+    <string name="gif">Gif</string>
+    <string name="choose_filter">Choose Filter</string>
+
+    <string-array name="filters_array">
+        <item>blur</item>
+        <item>mono</item>
+        <item>sepia</item>
+        <item>negative</item>
+        <item>paint</item>
+        <item>pixel</item>
+    </string-array>
+
 </resources>
+
+
