@@ -1,3 +1,9 @@
 package com.example.catmemegenerator.data.remote.retrofit
 
-data class Cat()
+import com.squareup.moshi.Json
+
+data class Cat(
+    @field:Json(name="url") val url:String?
+)
+
+

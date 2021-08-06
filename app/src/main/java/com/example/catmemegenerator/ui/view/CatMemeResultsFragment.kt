@@ -1,4 +1,4 @@
-package com.example.catmemegenerator
+package com.example.catmemegenerator.ui.view
 
 import androidx.fragment.app.Fragment
 

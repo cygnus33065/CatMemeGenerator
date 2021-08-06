@@ -9,6 +9,7 @@
     <string name="image">Image</string>
     <string name="gif">Gif</string>
     <string name="choose_filter">Choose Filter</string>
+    <string name="filter">Filter</string>
 
     <string-array name="filters_array">
         <item>blur</item>

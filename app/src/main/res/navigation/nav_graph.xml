@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/catMemeFilterFragment"
-        android:name="com.example.catmemegenerator.CatMemeFilterFragment"
+        android:name="com.example.catmemegenerator.ui.view.CatMemeFilterFragment"
         android:label="cat_meme_filter_fragment"
         tools:layout="@layout/cat_meme_filter_fragment" />
 </navigation>

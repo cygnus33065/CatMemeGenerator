@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/purple_500"
     android:layout_margin="7dp"
-    tools:context=".CatMemeFilterFragment">
+    tools:context=".ui.view.CatMemeFilterFragment">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_enter_text"
@@ -25,7 +25,9 @@
         app:layout_constraintTop_toBottomOf="@id/tv_enter_text"
         app:layout_constraintStart_toStartOf="parent"
         android:hint="@string/enter_text_here"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_enter_size"
@@ -45,6 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:hint="@string/enter_size_here"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"
         android:inputType="number"/>
 
     <com.google.android.material.textview.MaterialTextView
@@ -64,45 +68,54 @@
         app:layout_constraintTop_toBottomOf="@id/tv_enter_color"
         app:layout_constraintStart_toStartOf="parent"
         android:hint="@string/enter_color_here"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"/>
 
     <RadioGroup
         android:id="@+id/rg_gif_image"
-        android:checkedButton="@id/rb_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/et_enter_color"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="horizontal">
+
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rb_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/image"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rb_gif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gif"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:textColor="@color/white"/>
     </RadioGroup>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_spinner_label"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menu_filter"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/filter"
         app:layout_constraintTop_toBottomOf="@id/rg_gif_image"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/choose_filter"
-        android:layout_marginTop="15dp"/>
+        android:textColorHint="@color/white">
 
-    <Spinner
-        android:id="@+id/sp_filter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_spinner_label"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <AutoCompleteTextView
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
