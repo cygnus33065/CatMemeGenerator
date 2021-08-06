@@ -9,5 +9,14 @@
         android:id="@+id/catMemeFilterFragment"
         android:name="com.example.catmemegenerator.ui.view.CatMemeFilterFragment"
         android:label="cat_meme_filter_fragment"
-        tools:layout="@layout/cat_meme_filter_fragment" />
+        tools:layout="@layout/cat_meme_filter_fragment" >
+        <action
+            android:id="@+id/action_catMemeFilterFragment_to_catMemeResultsFragment"
+            app:destination="@id/catMemeResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catMemeResultsFragment"
+        android:name="com.example.catmemegenerator.ui.view.CatMemeResultsFragment"
+        android:label="cat_meme_results_fragment"
+        tools:layout="@layout/cat_meme_results_fragment" />
 </navigation>
