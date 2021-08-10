@@ -16,7 +16,7 @@ object CatManager {
         return service.getCat(filter)
     }
 
-    suspend fun getCatSays(text:String, color:String?, filter:String?, size:Int?):Response<Cat>{
+    suspend fun getCatSays(text:String, color:String?, filter:String?, size:String?):Response<Cat>{
         return service.getCatSays(text,color,filter,size)
     }
 
@@ -24,7 +24,7 @@ object CatManager {
         return service.getCatGif(filter)
     }
 
-    suspend fun getCatSaysGif(text:String, color:String?, filter:String?, size:Int?): Response<Cat>{
+    suspend fun getCatSaysGif(text:String, color:String?, filter:String?, size:String?): Response<Cat>{
         return service.getCatSaysGif(text,color,filter,size)
     }
 }

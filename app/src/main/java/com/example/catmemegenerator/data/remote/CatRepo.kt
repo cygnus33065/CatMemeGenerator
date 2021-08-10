@@ -18,7 +18,7 @@ object CatRepo {
         }
     }
 
-    suspend fun getCatSays(text:String, color:String?, filter:String?, size:Int?): Resource<Cat>{
+    suspend fun getCatSays(text:String, color:String?, filter:String?, size:String?): Resource<Cat>{
         return try{
             val catResponse = CatManager.getCatSays(text, color, filter, size)
             if(catResponse.isSuccessful && catResponse.body() != null){
@@ -44,7 +44,7 @@ object CatRepo {
         }
     }
 
-    suspend fun getCatSaysGif(text: String, color: String?, filter: String?, size:Int?): Resource<Cat>{
+    suspend fun getCatSaysGif(text: String, color: String?, filter: String?, size:String?): Resource<Cat>{
         return try{
             val catResponse = CatManager.getCatSaysGif(text, color, filter, size)
             if(catResponse.isSuccessful && catResponse.body() != null){

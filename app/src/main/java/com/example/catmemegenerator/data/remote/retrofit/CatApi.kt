@@ -9,8 +9,7 @@ interface CatApi{
 
     @GET("/cat/")
     suspend fun getCat(
-        FILTER:String?,
-        @Query("filter")apiKey:String?=FILTER
+        @Query("filter")filter:String?
     ): Response<Cat>
 
     @GET("/cat/says/{text}")
@@ -18,14 +17,13 @@ interface CatApi{
         @Path("text") text: String,
         @Query("color") color:String?,
         @Query("filter") filter:String?,
-        @Query("size") size:Int?
+        @Query("size") size:String?
     ):Response<Cat>
 
 
     @GET("/cat/gif")
     suspend fun getCatGif(
-        FILTER:String?,
-        @Query("filter")apiKey:String?=FILTER
+        @Query("filter")filter:String?
     ): Response<Cat>
 
     @GET("/cat/gif/says/{text}")
@@ -33,6 +31,6 @@ interface CatApi{
         @Path("text") text: String,
         @Query("color") color:String?,
         @Query("filter") filter:String?,
-        @Query("size") size:Int?
+        @Query("size") size:String?
     ):Response<Cat>
 }
