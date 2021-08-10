@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="7dp"
-    android:background="@color/purple_500"
     tools:context=".ui.view.CatMemeFilterFragment">
 
     <com.google.android.material.textview.MaterialTextView
@@ -14,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/enter_text"
-        android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,9 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_text_here"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_text" />
 
@@ -36,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/enter_text_size"
-        android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_enter_text" />
@@ -45,7 +39,6 @@
         android:id="@+id/ti_enter_size"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_primary"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_size"
         app:layout_constraintStart_toStartOf="parent"
         android:enabled="false">
@@ -56,9 +49,6 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_size_here"
             android:inputType="number"
-            android:textColor="@color/white"
-            android:textColorHighlight="@color/white"
-            android:textColorHint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:enabled="false"/>
@@ -73,7 +63,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/enter_text_color"
-        android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ti_enter_size" />
@@ -91,9 +80,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_color_here"
-            android:textColor="@color/white"
-            android:textColorHighlight="@color/white"
-            android:textColorHint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent "
             android:enabled="false"/>
@@ -114,17 +100,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/image"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:text="@string/image"/>
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rb_gif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/gif"
-            android:textColor="@color/white" />
+            android:text="@string/gif"/>
+
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -134,7 +118,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/filter"
-        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rg_gif_image">
 
@@ -142,9 +125,7 @@
             android:id="@+id/tv_filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:inputType="none"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

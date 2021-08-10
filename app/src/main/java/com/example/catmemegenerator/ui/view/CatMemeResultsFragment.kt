@@ -5,11 +5,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.catmemegenerator.Resource
 import com.example.catmemegenerator.data.remote.retrofit.Cat
 import com.example.catmemegenerator.databinding.CatMemeResultsFragmentBinding
+import com.example.catmemegenerator.loadWithGlide
 import com.example.catmemegenerator.ui.viewmodel.CatViewModel
 
 class CatMemeResultsFragment: Fragment() {
@@ -28,11 +32,19 @@ class CatMemeResultsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         catViewModel = ViewModelProvider(requireActivity()).get(CatViewModel::class.java)
+        binding.ivProgress.isVisible = true
 
-        Log.e("onViewCreated", catViewModel.cat.value.toString())
 
         catViewModel.cat.observe(viewLifecycleOwner, Observer{
-            Log.e("Observer", catViewModel.cat.value.toString())
+            when (it){
+                is Resource.Success -> {
+                    binding.ivProgress.isVisible = false
+                    val url = it.data.url
+                    binding.ivCat.loadWithGlide("https://cataas.com/${url}")
+                }
+                is Resource.Error -> Toast.makeText(requireContext(), "There was an error with your cat", Toast.LENGTH_LONG).show()
+            }
+
         })
     }
 }

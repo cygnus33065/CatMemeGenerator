@@ -96,6 +96,21 @@ class CatMemeFilterFragment: Fragment() {
 
         }
 
+        binding.butReset.setOnClickListener {
+            catViewModel.text = ""
+            catViewModel.size = ""
+            catViewModel.color = ""
+            catViewModel.filter = null
+            catViewModel.selected = "Image"
+            binding.etEnterText.setText(catViewModel.text)
+            binding.etEnterSize.setText(catViewModel.size)
+            binding.etEnterColor.setText(catViewModel.color)
+            binding.rbGif.isChecked = false
+            binding.rbImage.isChecked = true
+            binding.tvFilter.setText(catViewModel.filter)
+
+        }
+
     }
 
 }

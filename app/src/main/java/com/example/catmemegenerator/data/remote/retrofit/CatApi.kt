@@ -7,9 +7,10 @@ import retrofit2.http.Query
 
 interface CatApi{
 
-    @GET("/cat/")
+    @GET("/cat")
     suspend fun getCat(
-        @Query("filter")filter:String?
+        @Query("filter")filter:String?,
+        @Query("json")json:Boolean = true
     ): Response<Cat>
 
     @GET("/cat/says/{text}")
@@ -17,13 +18,15 @@ interface CatApi{
         @Path("text") text: String,
         @Query("color") color:String?,
         @Query("filter") filter:String?,
-        @Query("size") size:String?
+        @Query("size") size:String?,
+        @Query("json")json:Boolean = true
     ):Response<Cat>
 
 
     @GET("/cat/gif")
     suspend fun getCatGif(
-        @Query("filter")filter:String?
+        @Query("filter")filter:String?,
+        @Query("json")json:Boolean = true
     ): Response<Cat>
 
     @GET("/cat/gif/says/{text}")
@@ -31,6 +34,7 @@ interface CatApi{
         @Path("text") text: String,
         @Query("color") color:String?,
         @Query("filter") filter:String?,
-        @Query("size") size:String?
+        @Query("size") size:String?,
+        @Query("json")json:Boolean = true
     ):Response<Cat>
 }
